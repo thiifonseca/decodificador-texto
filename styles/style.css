@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap');
+
+:root{
+    --light-beige : #DCD7C9;
+    --medium-brown : #A27B5C;
+    --light-green : #3F4E4F;
+    --dark-green : #2C3639;
+
+    --font-primary: 'Inter', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--dark-green);
+    font-family: var(--font-primary);
+}
+
+::selection{
+ background-color: var(--dark-green);
+ color: var(--medium-brown);
+
+}
+.conteudo{
+    width: 100%;
+    height: 97%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+}
+
+.conteudo__logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 5%;
+    margin-left: 2%;
+    width: 10%;
+    
+}
+.logo__svg{
+    display: flex;
+    align-self: center;
+}
+.conteudo__logo__imagem{
+    width: 40%;
+}
+
+.conteudo__logo__links{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.conteudo__logo__links:hover{
+    filter: invert(48%) sepia(64%) saturate(256%) hue-rotate(345deg) brightness(94%) contrast(85%);
+}
+
+.conteudo__texto{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 15%;
+}
+#conteudo__textarea{
+    font-size: 2rem;
+    font-weight: 400;
+    border: none;
+    background-color: transparent;
+    color: var(--medium-brown);
+    resize: none;
+    outline: none;
+}
+
+#conteudo__textarea::placeholder{
+    color: var(--medium-brown);
+}
+
+.conteudo__restante{
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+
+}
+
+.conteudo__aviso{
+    display: flex;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.conteudo__botoes{
+    display: flex;
+    gap: 24px;
+}
+
+.conteudo__botao{
+    width: 100%;
+    padding: 24px;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-weight: 400;
+    border: 1.5px solid var(--medium-brown);
+    background: var(--light-beige);
+    color: var(--medium-brown);
+
+    box-shadow: inset 0 0 0 0 var(--medium-brown);
+   -webkit-transition: ease-out 0.4s;
+   -moz-transition: ease-out 0.4s;
+   transition: ease-out 0.4s;
+    
+
+}
+
+#copiar{
+    background: var(--light-beige);
+    color: var(--light-green);
+    border: 1.5px solid var(--light-green);
+
+    box-shadow: inset 0 0 0 0 var(--light-green);
+   -webkit-transition: ease-out 0.4s;
+   -moz-transition: ease-out 0.4s;
+   transition: ease-out 0.4s;
+}
+
+#copiar:hover{
+    background: var(--light-green);
+    color: var(--light-beige);
+    border: 1.5px solid var(--light-beige);
+    box-shadow: inset 0 0 0 50px var(--light-green);
+}
+
+.conteudo__botao:hover{
+   background: var(--medium-brown);
+   color: var(--light-beige);
+   border: 1.5px solid var(--light-beige);
+   box-shadow: inset 0 0 0 50px var(--medium-brown);
+}
+
+.conteudo__decodificado{
+    width: 30%;
+    height: 89.5%;
+    margin-top: 5%;
+    display: flex;
+   /* From https://css.glass */
+    background: rgba(220, 215, 201, 0.16);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(220, 215, 201, 0.14);
+    padding: 2%;
+}
+
+.conteudo__decodificado__mostrado{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 8px;
+    
+}
+
+
+.conteudo__decodificado__texto__negrito{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--medium-brown);
+}
+
+.conteudo__decodificado__texto{
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--light-beige);
+}
+
+
+.conteudo__decodificado__escondido{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+
+.conteudo__decodificado__escondido__textarea{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+    border: none;
+    background-color: transparent;
+    color: var(--light-beige);
+    resize: none;
+    outline: none;
+}
+
+footer{
+    height: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px outset var(--light-beige);
+    background-color: var(--medium-brown);
+}
+
+#footer__nome{
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--dark-green);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#shape1{
+  
+    animation: fillPrimeiro 3s infinite;
+}
+
+#shape2{
+    animation: fillSegundo 3s infinite;
+}
+@keyframes fillPrimeiro {
+
+    0%{
+        fill: var(--light-beige)
+    }
+
+    100%{
+        fill: var(--medium-brown);
+    }
+    
+}
+
+@keyframes fillSegundo {
+
+    0%{
+        fill: var(--medium-brown);
+    }
+
+    100%{
+        fill: var(--light-beige);
+    }
+}
+
+
+@media(max-width: 1000px){
+    body{
+        height: 100vh;
+    }
+    .conteudo{
+        height: auto;
+        flex-direction: column;
+        justify-content: space-between; 
+        
+    }
+
+    .conteudo__logo{
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-left: 0;
+        
+    }
+    .conteudo__logo__links{
+        width: 33%;
+        display: flex;
+        flex-direction: row;
+        align-items:center;
+        margin: 0;
+        
+    }
+    .conteudo__logo__imagem{
+       max-width: 80%;
+    
+    }
+    .conteudo__texto{
+        width: 100%;
+        
+        
+    }
+
+    .conteudo__decodificado{
+        width: 100%;
+        margin-top: 7%;
+        justify-content: center;
+        padding: 3%;
+    }
+    .conteudo__decodificado__escondido{
+        gap: 32px;
+    }
+
+    .conteudo__decodificado__imagem{
+        display: none;
+    }
+
+    footer{
+        height: 5%;
+        text-align: center;
+    }
+
+}
+
+@media(max-width: 650px){
+    body{
+        height: auto;
+    }
+    .conteudo{
+        height: auto;
+        width: auto;
+    }
+    .conteudo__logo__imagem{
+        width: 40%;
+    }
+
+    .conteudo__logo{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .logo__svg{
+        width: 30%;
+    }
+    .conteudo__botoes{
+    flex-direction: column;
+    }
+
+    .conteudo__decodificado{
+        margin: 10% 0%;
+        padding: 10%;
+    }
+
+    footer{
+        text-align: center;
+    }
+}
